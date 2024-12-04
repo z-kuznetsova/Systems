@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Генератор облаков</title>
+<style>
+  img {
+    max-width: 100%; /* Важно для масштабирования */
+    height: auto; /* Автоматически сохраняет пропорции */
+    display: block; /* Убирает лишний отступ */
+    margin: 0 auto; /* Выравнивание по центру */
+  }
+  /* Дополнительный стиль для улучшения внешнего вида */
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  h1{
+    margin-bottom: 20px;
+  }
+  form {
+    margin-top: 20px;
+  }
+  
+  button{
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<h1>Генерация облаков</h1>
+
+{% if img_src %}
+<img src="{{ img_src }}" alt="Сгенерированное изображение" width="400" height="400">
+{% endif %}
+
+<form method="POST">
+  <button type="submit">Сгенерировать изображение</button>
+</form>
+
+
+</body>
+</html>
